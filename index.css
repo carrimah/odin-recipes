@@ -1,0 +1,153 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --bg-col: #f7efdc;
+    --main-col: #428631;
+    --hover-col: #1d4b11;
+    --cover-col: #ebe1ca;
+    --border-col: #e6e0d1;
+    --shadow-col: #b4a789;
+    --txt-col: rgb(85, 77, 65);
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--bg-col);
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #b6a98b;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--main-col);
+}
+
+body{
+    display: flex; flex-direction: column; justify-content: space-between; align-items: center;
+    gap: 2em;
+    background-color: var(--bg-col);
+    color: var(--main-col);
+    padding: 2em 9em;
+}
+
+
+/*Main Content Layout*/
+#book-cover, .book-page{
+    height: 94vh; width: 100%;
+    display: flex; flex-direction: column;
+    background-color: var(--cover-col);
+    padding: 4em 0;
+    border: 2px outset var(--border-col);
+    text-align: center;
+}
+/*Cover*/
+#book-cover{
+    justify-content: space-between; align-items: center;
+    box-shadow: 4px 2px 15px 3px var(--shadow-col);
+}
+#cover-name{
+    letter-spacing: 0.2em;
+}
+#cover-title{
+    font-size: 6em;
+}
+#cover-subtitle{
+    position: relative;
+    bottom: -2em;
+}
+/*Page*/
+.book-page{
+    color: var(--txt-col);
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+.page-title{
+    font-size: 2em;
+}
+
+
+/*Table of Contents*/
+.toc.book-page{
+    padding: 4em;
+}
+.toc .page-title{
+    margin-bottom: 1em;
+}
+.toc-list{
+    text-align: justify;
+    margin-left: 1em;
+}
+.toc-list li{
+    width: 100%;
+    border-bottom: 1px dotted;
+    margin-bottom: 0.6em;
+}
+.toc-list a{
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+}
+.toc-list li:hover{
+    position: relative;
+    transform: translateY(-0.2em);
+    color: var(--main-col);
+}
+
+/*Recipe*/
+.recipe.book-page{
+    padding: 2em;
+    gap: 1em;
+    text-align: justify;
+}
+.recipe .page-title{
+    text-transform: uppercase;
+}
+.recipe h3{
+    text-transform: uppercase;
+    margin-bottom: 0.3em;
+}
+.recipe-title{
+    display: flex; justify-content: space-between;
+    border-bottom: 1px solid var(--txt-col);
+    padding-bottom: 2em;
+}
+.recipe-body{
+    display: flex;
+    gap: 1em;
+}
+.recipe-ingredients li{
+    margin-left: 1em;
+    border-bottom: 1px solid;
+}
+.recipe-img{
+    width: 100%;
+    height: fit-content;
+    border: 1px solid;
+    padding: 0.5em;
+}
+.recipe-img img{
+    width: 100%;
+}
+.recipe-steps, .recipe-notes{
+    margin-top: 2em;
+    border-top: 1px solid;
+    padding-top: 1em;
+}
+
+.recipe-steps li, .recipe-notes li{
+    margin-left: 1.5em;
+    padding-bottom: 0.25em;
+    margin-bottom: 0.5em;
+    border-bottom: 1px solid;
+}

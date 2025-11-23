@@ -4,13 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrima's Recipe Book</title>
+    <link rel="stylesheet" href="./index.css">
+    <style>
+        /*Table of Contents*/
+        .content-list{
+            display: flex; flex-direction: column;
+            text-transform: uppercase;
+            list-style: none;
+        }
+        .content-list a{
+            text-decoration: none;
+            color: inherit;
+        }
+        .content-list p{
+            text-transform: none;
+        }
+        .book-page#content-page{
+            justify-content: center;
+        }
+        #content-page .page-title{
+            font-size: 2.5em;
+            margin-bottom: 3em;
+        }
+        #content-page .content-list a{
+            font-size: 1.6em;
+        }
+        #content-page .content-list{
+            gap: 4.5em;
+        }
+    </style>
 </head>
 <body>
-    <h1>Carrima's Recipe Book</h1>
-    <a href="./recipes/birria.html">Birria</a>
-    <a href="./recipes/stew-peas.html">Stew Peas</a>
-    <a href="./recipes/short-rib-pasta.html">Short Rib Ragu Pasta</a>
-    <a href="./recipes/churrasco.html">Churrasco</a>
-    <a href="./recipes/salmon.html">Salmon</a>
+    <section id="book-cover">
+        <p id="cover-name">CARRIMA'S</p>
+        <h1 id="cover-title">recipe<br>book</h1>
+        <p id="cover-subtitle">ODIN 2025</p>
+    </section>
+    <section class="book-page" id=content-page>
+        <h2 class="page-title">CONTENTS</h2>
+        <ol class="content-list">
+            <li><a href="./recipes/mains/mains.html">Mains</a><p>Full Entrees or La pièce de résistance</p></li>
+            <li><a href="./recipes/sides/sides.html">Sides</a><p>Cute little side piece</p></li>
+            <li><a href="./recipes/beverages/beverages.html">Beverages</a><p>Shorty what you drinkin?</p></li>
+            <li><a href="./recipes/desserts/desserts.html">Desserts</a><p>Trick or treat without the trick</p></li>
+        </ol>
+    </section>
 </body>
 </html>
