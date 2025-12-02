@@ -41,7 +41,6 @@ body{
     padding: 2em 9em;
 }
 
-
 /*Main Content Layout*/
 #book-cover, .book-page{
     height: 94vh; width: 100%;
@@ -166,4 +165,17 @@ body{
 }
 .recipe-steps li, .recipe-notes li{
     padding-bottom: 0.5em;
+}
+
+/* Non-Typical Layout*/
+@media (orientation: landscape) {
+  /* CSS rules to apply when the width is greater than the height */
+  .toc-list a, li{font-size: 1.5em;}
+  .toc .page-title{font-size: 3em;}
+  .recipe-title{font-size: 1.5em;}
+  .recipe-body{ display: grid; grid-template-columns: repeat(2, 1fr); align-items:start;}
+  .recipe-body > * {height: 100%;}
+  .recipe-body > :nth-child(n+3){ grid-column-end: span 2;}
+  .recipe-img{border: 4px double;}
+  .recipe-desc{font-size: 1.5em;}
 }
